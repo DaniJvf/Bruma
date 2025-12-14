@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/icono.png" type="image/png">
+    <title>Bruma - Productos</title>
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+    <h3>Bruma Coffe</h3>
+    <nav>
+    <a href="index.html">Inicio</a>
+    <a href="#">Productos</a>
+    <button id="abrirCarrito" class="btn-carrito">🛒</button>
+
+    <!-- BOTÓN DEL USUARIO -->
+    <button id="btnUsuario" class="usuario-btn oculto"></button>
+    </nav>
+</header>
+
+<!-- CARRITO LATERAL -->
+<div id="carrito" class="carrito-oculto">
+
+  <div class="carrito-header">
+      <h3>Carrito</h3>
+      <button id="cerrarCarrito" class="cerrar-btn">X</button>
+  </div>
+
+  <!-- Aquí se cargan los productos -->
+  <div id="carritoItems"></div>
+
+  <div class="carrito-footer">
+
+      <div class="resumen-line">
+          <span>Subtotal</span>
+          <span id="subtotalCarrito">$0</span>
+      </div>
+
+      <div class="resumen-line">
+          <span>Descuento</span>
+          <span id="descuentoCarrito">$0</span>
+      </div>
+
+      <div class="resumen-line total-line">
+          <span>Total</span>
+          <span id="totalCarrito">$0</span>
+      </div>
+
+      <div class="resumen-line envio-line">
+        <span id="mensajeEnvio"></span>
+    </div> 
+
+      <button id="finalizarCompra" class="finalizar-btn">Finalizar compra</button>
+  </div>
+
+</div>
+
+<!-- BANNER SLIDER -->
+<div class="banner-container">
+    <div class="banner-slide fade"><img src="/cafeto.jpg" alt="Banner 1"></div>
+    <div class="banner-slide fade"><img src="/granos.jpg" alt="Banner 2"></div>
+    <div class="banner-slide fade"><img src="/sirviendo.jpg" alt="Banner 3"></div>
+</div>
+  
+  <!-- PRODUCTOS -->
+  <center><h2>Nuestros productos..</h2></center>
+  <section id="productos" class="products"></section>
+
+  <!-- DESCRIPCIÓN DEL PRODUCTO -->
+<section id="productoDetalle" class="products" style="display: none;"></section>
+
+  <!-- MODAL LOGIN -->
+<div id="modalLogin" class="modal-login">
+  <div class="login-box">
+      
+      <button id="cerrarLogin" class="close-login">✖</button>
+
+      <h2>Iniciar sesión</h2>
+
+      <input type="text" id="usuarioNombre" placeholder="Tu nombre">
+
+      <button id="btnLogin" class="btn-login">Entrar</button>
+  </div>
+</div>
+
+  <!-- JS PRINCIPAL -->
+  <script type="module" src="/src/main.js"></script>
+
+  <!-- SLIDER -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("banner-slide");
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slideIndex++;
+
+      if (slideIndex > slides.length) slideIndex = 1;
+
+      slides[slideIndex - 1].style.display = "block";
+
+      setTimeout(showSlides, 3500);
+    }
+  </script>
+
+  <!-- SIDEBAR -->
+  <script>
+    const openBtn = document.querySelector(".open-sidebar");
+    const closeBtn = document.querySelector(".close-sidebar");
+    const sidebar = document.querySelector(".sidebar");
+
+    openBtn.addEventListener("click", () => sidebar.classList.add("show"));
+    closeBtn.addEventListener("click", () => sidebar.classList.remove("show"));
+</script>
+
+<!-- CARRITO -->
+<script>
+    const carritoBox = document.getElementById("carrito");
+    const abrir = document.getElementById("abrirCarrito");
+    const cerrar = document.getElementById("cerrarCarrito");
+    abrir.addEventListener("click", () => carritoBox.classList.add("mostrar"));
+    cerrar.addEventListener("click", () => carritoBox.classList.remove("mostrar"));
+  </script>
+
+<!-- ACERCA DE -->
+<section class="acerca-de">
+  <div class="acerca-de-container">
+    <h2>Acerca de nosotros</h2>
+    <div class="acerca-items">
+      <div class="item">
+        <h3>Misión</h3>
+        <p>Brindar productos de calidad y atención personalizada a nuestros clientes, creando experiencias de compra únicas.</p>
+      </div>
+      <div class="item">
+        <h3>Visión</h3>
+        <p>Ser la tienda de referencia en nuestro rubro, reconocida por la excelencia y confianza que generamos en cada cliente.</p>
+      </div>
+      <div class="item">
+        <h3>Contacto</h3>
+        <a href="danielavillanueva22@gmail.com">danielavillanueva22@gmail.com</a>
+        <button class="contact-btn">Escríbenos</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

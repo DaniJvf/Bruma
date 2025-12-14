@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del producto</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <div id="productoDetalle"></div>
+
+  <script>
+    // Obtener datos del producto desde la URL
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get("nombre");
+    const precio = Number(params.get("precio"));
+    const img = params.get("img");
+    const category = params.get("category");
+
+    // Obtener carrito y usuario desde localStorage
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const usuario = localStorage.getItem("usuario");
+
+    const detalle = document.getElementById("productoDetalle");
+
+    detalle.innerHTML = `
+      <div class="card" style="max-width:400px; margin:auto; text-align:center;">
+        <img src="${img}" width="200">
+        <h2>${nombre}</h2>
+        <p>Precio: $${precio}</p>
+        <p>Categoría: ${category}</p>
+        <div style="margin:10px 0;">
+          <a href="index.html" class="detalle-btn">← Volver a productos</a>
+        </div>
+        <button id="comprarBtn" class="add-cart">Comprar</button>
+      </div>
+    `;
+
+    // Evento botón comprar
+    document.getElementById("comprarBtn").addEventListener("click", () => {
+      if (!usuario) {
+        alert("Debes iniciar sesión para comprar.");
+        return;
+      }
+
+      // Agregar al carrito
+      const item = carrito.find(p => p.nombre === nombre);
+      if (item) item.cantidad++;
+      else carrito.push({ nombre, precio, img, cantidad: 1 });
+
+      // Guardar carrito y avisar
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      alert(`${nombre} agregado al carrito`);
+    });
+  </script>
+
+</body>
+</html>
