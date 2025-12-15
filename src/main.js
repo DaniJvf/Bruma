@@ -3,18 +3,18 @@ import "./style.css";
 // DATOS DE PRODUCTOS
 // ==============================
 const productos = [
-  { nombre: "Cafe Timbuyacu", precio: 23900, img: "./products/timbuyacu.jpg", category: "cafe" },
-  { nombre: "Cafe Guatemala", precio: 23900, img: "./products/cafe guatemala.jpg", category: "cafe" },
-  { nombre: "Cafe La Laguna", precio: 23900, img: "./products/la laguna.jpeg", category: "te" },
-  { nombre: "Cafe Colombia", precio: 23900, img: "./products/cafe colombia.jpg", category: "te" },
-  { nombre: "Cafetera Moka", precio: 61000, img: "./products/Cafetera Moka.jpg", category: "torta" },
-  { nombre: "Cafetera Prensa", precio: 32200, img: "./products/prensa.jpg", category: "torta" },
-  { nombre: "Cafetera Sifon", precio: 40000, img: "./products/sifon.jpg", category: "torta" },
-  { nombre: "Cafetera Chemex", precio: 58790, img: "./products/chemex.jpg", category: "torta" },
-  { nombre: "Pitcher", precio: 21000, img: "./products/pitcher.jpg", category: "torta" },
-  { nombre: "Stick Art Latte", precio: 8550, img: "./products/stick.jpg", category: "torta" },
-  { nombre: "Tamper", precio: 15000, img: "./products/tamper.jpg", category: "torta" },
-  { nombre: "Tamping", precio: 25000, img: "./products/tamping.jpg", category: "torta" },
+  { nombre: "Cafe Timbuyacu", precio: 23900, img: "/products/timbuyacu.jpg", category: "cafe" },
+  { nombre: "Cafe Guatemala", precio: 23900, img: "/products/cafe guatemala.jpg", category: "cafe" },
+  { nombre: "Cafe La Laguna", precio: 23900, img: "/products/la laguna.jpeg", category: "te" },
+  { nombre: "Cafe Colombia", precio: 23900, img: "/products/cafe colombia.jpg", category: "te" },
+  { nombre: "Cafetera Moka", precio: 61000, img: "/products/Cafetera Moka.jpg", category: "torta" },
+  { nombre: "Cafetera Prensa", precio: 32200, img: "/products/prensa.jpg", category: "torta" },
+  { nombre: "Cafetera Sifon", precio: 40000, img: "/products/sifon.jpg", category: "torta" },
+  { nombre: "Cafetera Chemex", precio: 58790, img: "/products/chemex.jpg", category: "torta" },
+  { nombre: "Pitcher", precio: 21000, img: "/products/pitcher.jpg", category: "torta" },
+  { nombre: "Stick Art Latte", precio: 8550, img: "/products/stick.jpg", category: "torta" },
+  { nombre: "Tamper", precio: 15000, img: "/products/tamper.jpg", category: "torta" },
+  { nombre: "Tamping", precio: 25000, img: "/products/tamping.jpg", category: "torta" },
 ];
 
 // ==============================
