@@ -1,0 +1,141 @@
+.section {
+  padding: 96px 0;
+  background: var(--cream-50);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brown-500);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  color: var(--brown-900);
+  margin-bottom: 16px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ratingText {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  color: var(--brown-500);
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--cream-100);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  border: 1px solid rgba(93,60,30,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(30,15,5,0.1);
+  border-color: rgba(93,60,30,0.18);
+}
+
+.texto {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: var(--brown-700);
+  line-height: 1.65;
+  flex: 1;
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cream-100);
+  flex-shrink: 0;
+}
+
+.nombre {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brown-900);
+  display: block;
+}
+
+.ciudad {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  color: var(--brown-500);
+  display: block;
+}
+
+.verifiedBadge {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--brown-500);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1000px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .inner { padding: 0 24px; }
+}
+
+@media (max-width: 540px) {
+  .grid { grid-template-columns: 1fr; }
+}

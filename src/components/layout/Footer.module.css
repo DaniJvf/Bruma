@@ -1,0 +1,138 @@
+.footer {
+  background: var(--brown-950);
+  color: var(--cream-100);
+  padding: 72px 0 0;
+  margin-top: 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.4fr;
+  gap: 48px;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--cream-100);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.tagline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.87rem;
+  color: var(--brown-400);
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 260px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.83rem;
+  color: var(--brown-300);
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 4px 0;
+}
+
+.socialLink:hover {
+  color: var(--cream-100);
+}
+
+.col h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brown-400);
+  margin-bottom: 20px;
+}
+
+.col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.col ul li a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.86rem;
+  color: var(--brown-300);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.col ul li a:hover {
+  color: var(--cream-100);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.84rem;
+  color: var(--brown-300);
+  line-height: 1.4;
+}
+
+.contact li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--brown-500);
+}
+
+.bottom {
+  margin-top: 60px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 24px 48px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  color: var(--brown-600);
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    padding: 0 24px;
+  }
+  .brand { grid-column: 1 / -1; }
+  .bottom { padding: 20px 24px; flex-direction: column; gap: 6px; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .inner { grid-template-columns: 1fr; }
+}
