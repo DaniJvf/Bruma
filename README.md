@@ -20,7 +20,6 @@ Bruma es una tienda online desarrollada con React y Vite, inspirada en una cafet
 - Vite
 - JavaScript
 - CSS Modules
-- HTML
 
 # Estructura del proyecto
 
@@ -43,7 +42,7 @@ src/
 Cloná el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/bruma.git
+git clone https://github.com/DaniJvf/Bruma.git
 ```
 
 Entrá en la carpeta del proyecto:
@@ -72,7 +71,7 @@ npm run build
 
 # Demo
 
-https://animated-pothos-e631ec.netlify.app/
+https://brumatienda.netlify.app/
 
 # Objetivo del proyecto
 
@@ -90,5 +89,5 @@ Este proyecto fue desarrollado con el objetivo de practicar y fortalecer conocim
 
 Daniela Villanueva
 
-- GitHub: https://github.com/DaniJvf
+- GitHub: https://github.com/DaniJvf/Bruma.git
 - LinkedIn: https://www.linkedin.com/in/danielayvf/
